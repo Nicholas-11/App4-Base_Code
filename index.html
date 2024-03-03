@@ -85,13 +85,99 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
    img, object{
     	max-height:90%;
         max-width:90%;
+	/*This formatting is inplace for the sizing of the image that is on the first page.*/
 }
 </style>
 
 <body>
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1> Do you have a Migraine or a Tension-Type Headache? </h1>
+	</div>
+	<img src="https://th.bing.com/th/id/R.fdd46dbc846fd801afd47b89410a19ed?rik=QOHPG9o3GgGi%2bg&riu=http%3a%2f%2fcontent.health.harvard.edu%2fwp-content%2fuploads%2f2022%2f08%2fbf58db0e-a495-4738-bbe6-cdb6cfb167a6.jpg&ehk=h0CpBBtrJbs1JIr5QmdDqAiqWcZ0I3OtMYdxj%2bxlJxQ%3d&risl=&pid=ImgRaw&r=0" alt="Headache">
+		<!-- This code with the <img> tag allows me to put an image into my starting page of a headache by utilizing the images URL. -->
 	
-	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-	REPLACE THIS TEXT
+	<div id="content" class="w3-container">
+		<p>Are you feeling like you might be suffering from migraines but wonder if it is tension-type headaches? Answer a few short questions to find out!</p>
+		
+			<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+			<!-- For this question I typed, "Are you feeling like you might be suffering from migraines but wonder if it is tension-type headaches? Answer a few short questions to find out!" into the p tag and made a button titled "Get Started" that will lead you to the first page. -->
+
+		<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+		<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1> Question 1 </h1>
+	</div>
 	
+    	<div id="content" class="w3-container">
+        	<p> Is the pain that you are experiencing occuring on one side of your head or worse on one side of your head? </p> 
+		
+			<a href="#two"  onclick="migraineAdd();" class="w3-btn w3-black"> Yes </a>
+         		<a href="#two"  onclick="tensionTypeAdd();" class="w3-btn w3-black"> No </a>
+			<!-- For this question I typed, "Is the pain that you are experiencing occuring on one side of your head or worse on one side of your head?" into the p tag and then made my two buttons that added to migraineAdd if the answer is yes or tensionTypeAdd if the answer is no. Along with this, clicking the button would also take you to page two. -->
+    	</div>
+</div>
+
+<div class="page" id="two">
+	<div class="w3-container w3-flat-carrot">
+		<h1> Question 2 </h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p> Are you experiencing any additional symptoms like nausea or vomiting? </p>
+		
+			<a href="#three"  onclick="migraineAdd();" class="w3-btn w3-black"> Yes </a>
+         		<a href="#three"  onclick="tensionTypeAdd();" class="w3-btn w3-black"> No </a>
+			<!-- For this question I typed,"Are you experiencing any additional symptoms like nausea or vomiting?" into the p tag and then made my two buttons that added to migraineAdd if the answer is yes or tensionTypeAdd if the answer is no. Along with this, clicking the button would also take you to page three. -->
+	</div>
+</div>	
+
+<div class="page" id="three">
+	<div class="w3-container w3-flat-carrot">
+		<h1> Question 3 </h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p> Are you experiencing pain or tightness in the neck and/or shoulders? </p>
+		
+			<a href="#four"  onclick="tensionTypeAdd();" class="w3-btn w3-black"> Yes </a>
+         		<a href="#four"  onclick="migraineAdd();" class="w3-btn w3-black"> No </a>
+			<!-- For this question I typed, "Are you experiencing pain or tightness in the neck and/or shoulders?" into the p tag and then made my two buttons that added to migraineAdd if the answer is no or tensionTypeAdd if the answer is yes. Along with this, clicking the button would also take you to page four. -->
+	</div>
+</div>
+	
+<div class="page" id="four">
+	<div class="w3-container w3-flat-carrot">
+		<h1> Question 4 </h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p> Does your headache make you sensitive to light or sound? </p>
+		
+			<a href="#five"  onclick="migraineAdd();" class="w3-btn w3-black"> Yes </a>
+         		<a href="#five"  onclick="tensionTypeAdd();" class="w3-btn w3-black"> No </a>
+			<!-- For this question I typed, "Does your headache make you sensitive to light or sound?" into the p tag and then made my two buttons that added to migraineAdd if the answer is yes or tensionTypeAdd if the answer is no. Along with this, clicking the button would also take you to page five. -->
+	</div>
+</div>
+	
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<h1> Time for your results! </h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p id="results"></p>
+		
+			<a onclick="displayResults();" class="w3-btn w3-black"> Display Results</a>
+			<!-- For this last page, I made the header, "Time for your results!" and then placed the results id into the p tag. Along with this, I made a button that ran my displayResults function in order to get the percentages of your selections at the end of the questionnaire. -->
+	</div>
+</div>
+	
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
 </body>
 </html>
