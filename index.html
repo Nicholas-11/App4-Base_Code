@@ -36,9 +36,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </head> 
 
 <script>
+	// These two variables, migraine_count and tensionType_count, are used to keep track of the number of responses that are related to the signs and symptoms of a migraine or a tension-type headache.
+        var migraine_count = 0;
+        var tensionType_count = 0;
+	// I created two new variables in migrainePercent and tensionTypePercent in order to get the final values of the migraine_count and tensionType_count in relation to the total number of questions.
+	var migrainePercent = 0;
+	var tensionTypePercent = 0;
 
-	//YOUR JAVASCRIPT GOES HERE
+	//This function, migraineAdd, adds a unit to migraine_count when you select a button that corresponds to migraineAdd.
+        function migraineAdd(){
+        	migraine_count = migraine_count + 1;
+        }
+	//This function, tensionTypeAdd, adds a unit to tensionType_count when you select a button that corresponds to tensionTypeAdd.
+        function tensionTypeAdd(){
+        	tensionType_count = tensionType_count + 1;
+        }
 
+	//This function calculates migrainePercent and tensionTypePercent, then shows the results inside the p tag
+	function displayResults(){
+		migrainePercent = migraine_count/4 * 100;
+		tensionTypePercent = tensionType_count/4 * 100;
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is a migraine headache =" + migrainePercent + "%<br> Probability it is a tension-type headache =" + tensionTypePercent + "%";
+	}
 </script>	
 
 
